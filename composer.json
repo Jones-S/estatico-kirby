@@ -52,7 +52,8 @@
     "wpackagist-plugin/simple-301-redirects": "*",
     "wpackagist-plugin/limit-login-attempts": "*",
     "wpackagist-plugin/codepress-admin-columns": "*",
-    "roots/soil": "3.4.0"
+    "roots/soil": "3.4.0",
+    "getkirby/cli": "^1.4"
   },
   "extra": {
     "webroot-dir": "wp",
