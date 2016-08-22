@@ -1,0 +1,28 @@
+@import "../.tmp/colors";
+@import "globals/variables";
+@import "globals/functions";
+@import "globals/mixins";
+@import "globals/mediaqueries";
+
+
+// Reset / normalize styles
+@import "../../../node_modules/normalize.css/normalize";
+
+// Icons (as font or dataurl), PNG sprites
+@import "../.tmp/iconfont";
+@import "../.tmp/dataurls";
+@import "../.tmp/pngsprite";
+
+// General styles
+@import "mediaqueries_sync";
+@import "globals/classes";
+
+// General layout
+@import "layout";
+
+// Modules
+//*autoinsertmodule*
+
+@media print {
+	@import "print";
+}

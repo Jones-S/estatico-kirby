@@ -1,0 +1,68 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress",
+        "type": "webroot",
+        "version": "4.6.0",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/4.6.zip"
+        },
+        "require": {
+          "fancyguy/webroot-installer": "1.0.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.3.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NDc0MzZ8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTAxLTA4IDIyOjQ1OjA3"
+        }
+      }
+    },
+    {
+			"type": "git",
+			"url": "https://github.com/gillesgoetsch/acf-smart-button"
+		}
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "wordpress": "4.6.0",
+    "fancyguy/webroot-installer": "1.0.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "gillesgoetsch/acf-smart-button": "dev-master",
+    "wpackagist-plugin/wp-super-cache": "*",
+    "wpackagist-plugin/timber-library": "*",
+    "wpackagist-plugin/debug-bar": "*",
+    "wpackagist-plugin/debug-bar-timber": "*",
+    "wpackagist-plugin/google-sitemap-generator": "*",
+    "wpackagist-plugin/force-regenerate-thumbnails": "*",
+    "wpackagist-plugin/media-file-renamer": "*",
+    "wpackagist-plugin/simple-301-redirects": "*",
+    "wpackagist-plugin/limit-login-attempts": "*",
+    "wpackagist-plugin/codepress-admin-columns": "*",
+    "roots/soil": "3.4.0"
+  },
+  "extra": {
+    "webroot-dir": "wp",
+    "webroot-package": "wordpress",
+    "installer-paths": {
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  },
+  "config": {
+          "secure-http": false
+  }
+}
