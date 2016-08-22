@@ -21,6 +21,6 @@ Add a kirby installation
 
 Go to the kirby installation directory and install the kirby-twig plugin
 
-```$ cd kirby``` 
+```$ cd kirby```
 
 ```$ kirby plugin:install fvsch/kirby-twig```
