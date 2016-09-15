@@ -7,9 +7,9 @@ var _ = require('lodash'),
 
 var data = _.merge(defaultData, {
 		meta: {
-			title: '{{originalName}}',
-			code: dataHelper.getTemplateCode('{{name}}.twig'),
-			documentation: dataHelper.getDocumentation('{{name}}.md')
+			title: 'Logo',
+			code: dataHelper.getTemplateCode('logo.twig'),
+			documentation: dataHelper.getDocumentation('logo.md')
 		}
 	});
 

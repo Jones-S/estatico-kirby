@@ -46,6 +46,9 @@ gulp --dev
 
 ## Documentation
 
+### Kirby
+Set site root in `kirby/site/config/config.php`.
+
 ### Setup / Usage
 
 See [docs/Setup_and_Usage.md](docs/Setup_and_Usage.md)

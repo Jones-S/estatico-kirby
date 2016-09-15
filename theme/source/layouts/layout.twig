@@ -1,13 +1,12 @@
 {% spaceless %}
 <!doctype html>
-<!--[if IE 9]><html lang="de" class="no-js{% if globals.modifiers is defined %}{% for modifier in globals.modifiers %} {{ modifier }}{% endfor %}{% endif %}{% if page_modifiers is defined %}{% for modifier in page_modifiers %} {{ modifier }}{% endfor %}{% endif %} ie9 lte-ie9" ng-app='storyApp' ng-strict-di="true" ng-controller="MainController as mainController"><![endif]-->
-<!--[if gt IE 9]><!--><html lang="de" class="no-js{% if globals.modifiers is defined %}{% for modifier in globals.modifiers %} {{ modifier }}{% endfor %}{% endif %}{% if page_modifiers is defined %}{% for modifier in page_modifiers %} {{ modifier }}{% endfor %}{% endif %}"><!--<![endif]-->
+<html lang="de">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ globals.page_title|striptags }} | PIU</title>
+	<title>{{ site.title }} – {{ page.title }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="{{ globals.desc|striptags }}">
+	{# <meta name="description" content="{{ globals.desc|striptags }}">
 	<meta property="og:title" content="{{ globals.page_title|striptags }} | PIU" />
 	<meta property="og:description" content="{{ globals.desc|striptags }}" />
 	{% if globals.meta_img %}<meta property="og:image" content="{{ globals.meta_img }}" />{% endif %}
@@ -23,7 +22,7 @@
 
 	{% if not globals.gulp %}
 		{{ function('wp_head') }}
-	{% endif %}
+	{% endif %} #}
 </head>
 </head>
 <body>
@@ -35,16 +34,12 @@
 		{% endblock %}
 	</div>
 
-	{% if not globals.gulp %}
+	{# {% if not globals.gulp %}
 		{{ function('wp_footer') }}
-	{% endif %}
-	<script src="{{ globals.theme_root }}/assets/js/main{% if not globals.env.dev %}.min{% endif %}.js"></script>
+	{% endif %} #}
 
-	{% block scripts %}
-		{% if meta.testScripts %}
-			{% include "preview/partials/qunit.twig" %}
-		{% endif %}
-	{% endblock %}
+	{# <script src="{{ globals.theme_root }}/assets/js/main{% if not globals.env.dev %}.min{% endif %}.js"></script> #}
+
 </body>
 </html
 {% endspaceless %}

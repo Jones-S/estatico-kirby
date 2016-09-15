@@ -8,7 +8,6 @@
   "require": {
     "php": ">=5.5.0",
     "fancyguy/webroot-installer": "1.0.0",
-    "roots/soil": "3.4.0",
     "getkirby/cli": "^1.4",
     "mnsami/composer-custom-directory-installer": "1.1.*",
     "fvsch/kirby-twig": "2.0.2"
