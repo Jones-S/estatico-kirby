@@ -3,54 +3,33 @@
     {
       "type": "composer",
       "url": "http://wpackagist.org"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "wordpress",
-        "type": "webroot",
-        "version": "4.6.0",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/4.6.zip"
-        },
-        "require": {
-          "fancyguy/webroot-installer": "1.0.0"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.3.5",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NDc0MzZ8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTAxLTA4IDIyOjQ1OjA3"
-        }
-      }
-    },
-    {
-			"type": "git",
-			"url": "https://github.com/gillesgoetsch/acf-smart-button"
-		}
+    }
   ],
   "require": {
     "php": ">=5.5.0",
     "fancyguy/webroot-installer": "1.0.0",
     "roots/soil": "3.4.0",
-    "getkirby/cli": "^1.4"
+    "getkirby/cli": "^1.4",
+    "mnsami/composer-custom-directory-installer": "1.1.*",
+    "fvsch/kirby-twig": "2.0.2"
   },
   "extra": {
     "webroot-dir": "wp",
     "webroot-package": "wordpress",
     "installer-paths": {
-      "content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "content/themes/{$name}/": ["type:wordpress-theme"]
+      "./kirby": ["fvsch/kirby-twig"]
     }
   },
   "config": {
-          "secure-http": false
+    "secure-http": false
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "if test -d ./kirby/kirby; then echo 'Kirby: Core already exists. Skipping…'; else (cd kirby && ../vendor/getkirby/cli/kirby install:core) ; fi ",
+      "if test -f ./kirby/index.php; then echo 'Kirby: index.php already exists. Skipping…'; else (cd kirby && ../vendor/getkirby/cli/kirby install:index.php); fi ",
+      "if test -f ./kirby/.htaccess; then echo 'Kirby: .htaccess already exists. Skipping…'; else (cd kirby && ../vendor/getkirby/cli/kirby install:htaccess); fi ",
+      "if test -d ./kirby/panel; then echo 'Kirby: panel already exists. Skipping…'; else (cd kirby && ../vendor/getkirby/cli/kirby install:panel); fi "
+
+    ]
   }
 }
