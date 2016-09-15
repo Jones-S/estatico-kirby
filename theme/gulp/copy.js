@@ -15,7 +15,7 @@ var taskName = 'copy',
 			'./source/assets/media/fav/**/*',
 			'./source/{layouts,pages/**,modules/**}/*.twig'
 		],
-		dest: './../content/themes/piu/',
+		dest: './../kirby/',
 		watch: [
 			'./build/assets/**/*',
 			'./source/{layouts,pages/**,modules/**}/*.twig'
@@ -31,7 +31,10 @@ gulp.task(taskName, ['html'], function() {
 		})
 		.pipe(changed(taskConfig.dest))
 		.pipe(rename(function(path) {
-			path.dirname = path.dirname.replace('build/', '').replace('source/', 'views/');
+			path.dirname = path.dirname
+				.replace('build/', '')
+				.replace('source/', 'site/templates/')
+				.replace(/pages\/\w+\/?/, '');
 		}))
 		.pipe(gulp.dest(taskConfig.dest));
 });
