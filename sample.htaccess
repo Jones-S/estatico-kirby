@@ -1,10 +1,14 @@
-# BEGIN WordPress
+# BEGIN Kirby
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteRule ^index\.php$ - [L]
+RewriteRule ^(assets|content)/(.*) /kirby/$1/$2 [L]
+RewriteRule ^$ /kirby
+RewriteRule ^kirby/index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteRule . /kirby/index.php [L
 </IfModule>
-# END WordPress
+# END Kirby
+
+
