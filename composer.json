@@ -16,7 +16,7 @@
     "webroot-dir": "wp",
     "webroot-package": "wordpress",
     "installer-paths": {
-      "./kirby": ["fvsch/kirby-twig"]
+      "./kirby/site/plugins/twig": ["fvsch/kirby-twig"]
     }
   },
   "config": {
