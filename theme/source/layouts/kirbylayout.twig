@@ -27,8 +27,10 @@
 	{% include "modules/kirbyheader/kirbyheader.twig" %}
 
 	<div class="layout_wrapper" id="main">
-		{% block content %}
-		{% endblock %}
+		<main class="main" role="main">
+			{% block content %}
+			{% endblock %}
+		</main>
 	</div>
 
 	{% include "modules/kirbyfooter/kirbyfooter.twig" %}

@@ -7,9 +7,9 @@ var _ = require('lodash'),
 
 var data = _.merge(defaultData, {
 		meta: {
-			title: 'Kirby Projects',
-			code: dataHelper.getTemplateCode('kirbyprojects.twig'),
-			documentation: dataHelper.getDocumentation('kirbyprojects.md')
+			title: 'Kirby List Projects',
+			code: dataHelper.getTemplateCode('kirbylistprojects.twig'),
+			documentation: dataHelper.getDocumentation('kirbylistprojects.md')
 		}
 	});
 
