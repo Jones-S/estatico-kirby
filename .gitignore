@@ -37,9 +37,12 @@ content/themes/piu/data
 content/themes/piu/views
 
 kirby/*
+!kirby/site.php
 !kirby/content
 !kirby/content/**
 kirby/content/.DS_Store
+!kirby/site/data
+!kirby/site/data/*
 !kirby/site/config
 !kirby/site/config/*
 !kirby/site/controllers
