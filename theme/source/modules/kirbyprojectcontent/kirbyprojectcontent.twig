@@ -1,6 +1,8 @@
 <div class="mod_kirbyprojectcontent" data-init="kirbyprojectcontent">
 	<main class="main" role="main">
 
+		{% set images = page.images.sortBy('sort', 'asc') %}
+
 		<h1>{{ page.title | raw }}</h1>
 
 		<ul class="meta cf">
@@ -11,8 +13,10 @@
 		<div class="text">
 		 {{ page.text.kirbytext | raw }}
 
-		 	{% for image in page.images %}
-		 	        <li>hallo bild</li>
+		 	{% for image in images %}
+	 	        <figure>
+					<img src="{{ image.url() }}" alt="{{ page.title | raw }}">
+				</figure>
 	 	    {% endfor %}
 
 			{# <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
