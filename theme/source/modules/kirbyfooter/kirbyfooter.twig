@@ -1,3 +1,14 @@
 <div class="mod_kirbyfooter" data-init="kirbyfooter">
-	Kirby Footer
+	<footer class="footer cf" role="contentinfo">
+
+		<div class="copyright">
+			{# Use raw to not escape html entities #}
+			{{ site.copyright.kirbytext | raw  }}
+		</div>
+
+		<div class="colophon">
+			<a href="http://getkirby.com/made-with-kirby-and-love">Made with Kirby and <b>♥</b></a>
+		</div>
+
+	</footer>
 </div>
