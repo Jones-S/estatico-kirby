@@ -16,7 +16,6 @@ atlassian-ide-plugin.xml
 .qunit
 
 
-wp-config.php
 .htaccess
 info.php
 
@@ -28,21 +27,13 @@ theme/source/assets/vendor
 wp
 /vendor
 composer
-content/*
-!content/themes
-content/themes/*
-!content/themes/piu
-content/themes/piu/assets
-content/themes/piu/data
-content/themes/piu/views
+
 
 kirby/*
 !kirby/site.php
 !kirby/content
 !kirby/content/**
 kirby/content/.DS_Store
-!kirby/site/data
-!kirby/site/data/*
 !kirby/site/config
 !kirby/site/config/*
 !kirby/site/controllers
