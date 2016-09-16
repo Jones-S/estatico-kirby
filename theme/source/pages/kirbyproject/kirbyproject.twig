@@ -2,6 +2,12 @@
 
 {% block content %}
 
-	{% include "modules/kirbyprojectcontent/kirbyprojectcontent.twig" %}
+	<h1>{{ page.title | raw }}</h1>
+
+	{% include "modules/kirbymeta/kirbymeta.twig" %}
+
+	{% include "modules/kirbytext/kirbytext.twig" %}
+
+	{% include "modules/kirbynextprev/kirbynextprev.twig" %}
 
 {% endblock %}

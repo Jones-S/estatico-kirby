@@ -13,8 +13,6 @@
     "fvsch/kirby-twig": "2.0.2"
   },
   "extra": {
-    "webroot-dir": "wp",
-    "webroot-package": "wordpress",
     "installer-paths": {
       "./kirby/site/plugins/twig": ["fvsch/kirby-twig"]
     }

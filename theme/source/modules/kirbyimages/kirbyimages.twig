@@ -1,0 +1,7 @@
+<div class="mod_kirbyimages" data-init="kirbyimages">
+	{% for image in images %}
+		<figure>
+			<img src="{{ image.url() }}" alt="{{ page.title | raw }}">
+		</figure>
+	{% endfor %}
+</div>
