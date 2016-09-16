@@ -36,8 +36,14 @@ content/themes/piu/assets
 content/themes/piu/data
 content/themes/piu/views
 
-kirby
-!kirby/content/*
+kirby/*
+!kirby/content
+!kirby/content/**
+kirby/content/.DS_Store
+!kirby/site/config
 !kirby/site/config/*
+!kirby/site/controllers
 !kirby/site/controllers/*
+!kirby/site/blueprints
+!kirby/site/blueprints/*
 kirby 2/
