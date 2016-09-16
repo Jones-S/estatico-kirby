@@ -1,3 +1,42 @@
 <div class="mod_kirbymenu" data-init="kirbymenu">
-	Kirby Menu
+	<nav role="navigation">
+
+		{% set projects = site
+		    .find('projects')
+		    .children
+		    .sortBy('date', 'desc')
+		%}
+
+
+		{% if projects.count %}
+		    <ul class="menu cf">
+		    {% for post in projects %}
+		    	{% if post.visible %}
+		        	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		    	{% endif %}
+		    {% endfor %}
+		    </ul>
+		{% endif %}
+
+		{# <ul class="menu cf">
+			<?php foreach($pages->visible() as $p): ?>
+			<li>
+				<a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
+
+				<?php if($p->hasVisibleChildren()): ?>
+				<ul class="submenu">
+					<?php foreach($p->children()->visible() as $p): ?>
+					<li>
+						<a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
+					</li>
+					<?php endforeach ?>
+				</ul>
+				<?php endif ?>
+
+			</li>
+			<?php endforeach ?>
+		</ul> #}
+
+	</nav>
+
 </div>

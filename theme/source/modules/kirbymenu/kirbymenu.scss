@@ -1,3 +1,82 @@
 .mod_kirbymenu {
 
+    /* Navigation
+    -------------------------------------------------- */
+    .menu a {
+      display: block;
+      color: #222;
+    }
+    .menu a:hover {
+      color: red;
+      text-decoration: none;
+    }
+    .menu .active {
+      color: red;
+    }
+    .menu li {
+      list-style: none;
+    }
+    .menu > li {
+      position: relative;
+    }
+    .menu > li > a {
+      padding: .35em 0;
+      border-top: 1px solid #ddd;
+      font-weight: 600;
+    }
+
+    .submenu {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      left: 1em;
+    }
+    .submenu:before {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      top: -.5em;
+      left: 0;
+      border-top: .5em solid transparent;
+      border-bottom: .5em solid transparent;
+      border-left: .5em solid #222;
+    }
+    .submenu li {
+      border-bottom: 1px solid #444;
+    }
+    .submenu a {
+      padding: .5em 1.5em;
+      font-size: .9em;
+      font-weight: 300;
+      color: #fff;
+      background: #222;
+      white-space: nowrap;
+    }
+    .submenu a:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    @media screen and (min-width: 40em) {
+      body {
+        padding: 3em;
+      }
+      .logo {
+        float: left;
+      }
+      .menu {
+        float: right;
+        margin-right: -1em;
+      }
+      .menu > li {
+        float: left;
+      }
+      .menu > li > a {
+        padding: .35em 1em;
+        border: 0;
+      }
+      .menu > li:hover .submenu {
+        display: block;
+      }
+    }
 }
