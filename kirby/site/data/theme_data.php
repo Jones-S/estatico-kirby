@@ -17,5 +17,9 @@ class ThemeData {
 		return $this->kirby->page()->images();
 	}
 
+	public function getProjects($limit) {
+		return $this->kirby->site()->pages()->find('projects')->children()->visible()->limit($limit);
+	}
+
 
 }
