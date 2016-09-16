@@ -1,0 +1,33 @@
+.mod_kirbycontent {
+
+	/* Main
+	-------------------------------------------------- */
+	.main {
+		padding-bottom: 1.5em;
+		border-bottom: 2px solid red;
+	}
+	.main hr {
+		margin: 3em 0;
+		height: 2px;
+		background: #ddd;
+	}
+	.main p,
+	.main figure,
+	.main ul,
+	.main ol {
+		margin-bottom: 1.5em;
+	}
+	.main a {
+		border-bottom: 2px solid #ddd;
+	}
+	.main a:hover {
+		border-color: #222;
+	}
+
+	/* Text blocks */
+	.text ul,
+	.text ol {
+		margin-left: 1em;
+	}
+
+}
