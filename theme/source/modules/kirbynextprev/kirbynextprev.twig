@@ -1,10 +1,13 @@
 <div class="mod_kirbynextprev" data-init="kirbynextprev">
 	<nav class="nextprev cf" role="navigation">
-		{# <?php if($prev = $page->prevVisible()): ?>
-		<a class="prev" href="<?php echo $prev->url() ?>">&larr; previous</a>
-		<?php endif ?>
-		<?php if($next = $page->nextVisible()): ?>
-		<a class="next" href="<?php echo $next->url() ?>">next &rarr;</a>
-		<?php endif ?> #}
+
+		{% if page.prevVisible() %}
+			<a class="prev" href="{{ page.prevVisible.url }}">&larr; previous</a>
+		{% endif %}
+
+		{% if page.nextVisible() %}
+			<a class="next" href="{{ page.nextVisible.url }}">next &rarr;</a>
+		{% endif %}
+
 	</nav>
 </div>
