@@ -1,9 +1,9 @@
 <div class="mod_kirbyheader" data-init="kirbyheader">
     <header class="header cf" role="banner">
       {# <a class="logo" href="<?php echo url() ?>"> #}
-      <a class="logo" href="{{ site.url }}">
+      <a class="logo" href="{{ site.url() }}">
         {# <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" /> #}
-        <img src="{{ site.url }}/assets/media/logo.svg" alt="{{ site.title }}" />
+        <img src="{{ site.url() }}/assets/media/logo.svg" alt="{{ site.title }}" />
 
       </a>
       {% include "modules/kirbymenu/kirbymenu.twig" %}
