@@ -1,24 +1,22 @@
 <div class="mod_kirbymenu" data-init="kirbymenu">
 	<nav role="navigation">
 
-		{% set projects = site
-		    .find('projects')
-		    .children
-		    .sortBy('date', 'desc')
-		%}
 
-
-		{% if projects.count %}
+		{% if menu_pages.count %}
 		    <ul class="menu cf">
-		    {% for post in projects %}
-		    	{% if post.visible %}
+		    {% for page in menu_pages %}
 		        	<li>
-		        		<a {{ post.isOpen ? 'class"active" : ""'}} href="{{ post.url }}">{{ post.title }}</a>
-		        		{% if post.hasVisibleChildren %}
-		        			{# TODO implement submenu as presented in kirby starterkit #}
+		        		<a {{ page.isOpen ? 'class"active" : ""'}} href="{{ page.url }}">{{ page.title }}</a>
+		        		{% if page.hasVisibleChildren %}
+		        			<ul class="submenu">
+			        			{% for subpage in page.children %}
+				        			<li>
+				        			  <a href="{{ subpage.url }}">{{ subpage.title }}</a>
+				        			</li>
+				        		{% endfor %}
+				        	</ul>
 		        	    {% endif %}
 		        	</li>
-		    	{% endif %}
 		    {% endfor %}
 		    </ul>
 		{% endif %}

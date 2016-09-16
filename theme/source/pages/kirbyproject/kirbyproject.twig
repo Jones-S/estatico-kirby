@@ -2,15 +2,6 @@
 
 {% block content %}
 
-	{% if images.count %}
-		{% for image in images %}
-	    	<figure>
-				<img src="{{ image.url() }}" alt="{{ page.title | raw }}">
-			</figure>
-		{% endfor %}
-
-	{% endif %}
-
 	<h1 class="testjones">{{ page.title | raw }}</h1>
 
 	{% include "modules/kirbymeta/kirbymeta.twig" %}
