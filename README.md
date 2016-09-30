@@ -6,14 +6,21 @@ First install composer
 https://getcomposer.org/
 
 Then install the kirby client globally via composer:
+
 ```$ composer global require getkirby/cli```
 
 
-Place the directory `~/.composer/vendor/bin`in your PATH:
+Place the directory 
+
+```~/.composer/vendor/bin``` 
+
+in your PATH:
+
 ```$ export PATH="$PATH:$HOME/.composer/vendor/bin"```
 
 
 Finally install composer dependencies
+
 ```$ composer install```
 
 This will not only install the dependencies (which include twig support for the kirby cms) but also execute a postinstall, which installs a core installation of kirby.
@@ -22,6 +29,7 @@ This will not only install the dependencies (which include twig support for the 
 Further installation steps are required. To do so, go to the `theme` directory with your terminal. Node and the node package manager need to be installed prior to the next steps.
 
 ```$ nvm use```
+
 ```$ npm install```
 
 Now everything should be installed properly.
