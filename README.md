@@ -10,9 +10,10 @@ Then install the kirby client globally via composer:
 ```$ composer global require getkirby/cli```
 
 
-Place the directory 
+Place the directory
 
-```~/.composer/vendor/bin``` 
+`~/.composer/vendor/bin`
+
 
 in your PATH:
 
@@ -74,11 +75,11 @@ The above code resides within a controller file. It will return the page images 
 
 ```
 public function getGlobals() {
-		$globals = [];
-		// get only visible pages
-		$globals['menu_pages'] = $this->kirby->site()->pages()->visible();
-		return $globals;
-	}
+	$globals = [];
+	// get only visible pages
+	$globals['menu_pages'] = $this->kirby->site()->pages()->visible();
+	return $globals;
+}
 ```
 
 Shown is the getGlobals function of the ThemeData class. In this case the getGlobals is collecting all visible pages.
